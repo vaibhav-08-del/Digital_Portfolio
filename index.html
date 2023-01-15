@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page title</title>
+    <link rel ="stylesheet" href="styles.css">
+ </head>
+ <body>
+    <div class="container">
+       <div class="nav-wrapper"> 
+              <div class="left-hand">
+                 <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                  </div>
+         
+                 <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                 </div>
+               </div>
+
+              <div class="right-hand">
+                  <div class="Brand">
+                     <div> VAIBHAV REDDY </div>
+                  </div>
+               </div>
+          </div>
+          <div class="content-wrapper">
+             <div class="Portfolio-items-wrapper">
+
+                <div class="Portfolio-item-wrapper">
+                   <div class="Portfolio-img-background" style="background-image:url(Images/project1.jpg)"></div>
+                      
+                   <div class="image-text-wrapper">
+                     <div class="Logo-wrapper">
+                        <img src="Images/project2.png">
+                     </div>
+                     <div class="Subtitle">
+                        Deepd dive into all the projects curated by me througout my carrer.
+
+                     </div>
+                   </div>
+
+                  </div>
+
+
+                <div class="Portfolio-item-wrapper">
+                  <div class="Portfolio-img-background" style="background-image:url(Images/papers1.jpg)"></div>
+                     
+                  <div class="image-text-wrapper">
+                    <div class="Logo-wrapper">
+                       <img src="Images/papers2.png" alt=" ">
+                    </div>
+                      <div class="Subtitle"> An overwiew of all the reserch papers I referd and wrote.</div>
+                  </div>
+
+                 </div>  
+
+                 <div class="Portfolio-item-wrapper">
+                     <div class="Portfolio-img-background" style="background-image:url(Images/Carrer1.jpg)"></div>
+                     
+                   <div class="image-text-wrapper">
+                      <div class="Logo-wrapper">
+                          <img src="Images/Carrer2.png">
+                      </div>
+                          <div class="Subtitle"> My Corporate carrer information and my achivements.</div>
+                     </div>
+
+                 </div>
+
+                  
+            </div>
+        </div>
+     </div>  
+ </body>    
+ <script>
+   const portfolioItems= document.querySelectorAll('.portfolio-item-wrapper')
+
+   portfolioItems.forEach(portfolioItem =>{
+      portfolioItem.addEventListener('mouseover',() =>{
+         
+         portfolioItem.childNodes[1].classList.add('img-darken');
+      })
+      portfolioItem.addEventListener('mouseout',() =>{
+         
+         portfolioItem.childNodes[1].classList.remove('img-darken');
+      })
+
+   })
+ </script>   
+</html>
