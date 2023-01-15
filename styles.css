@@ -1,5 +1,6 @@
 /*Master Styles*/
 body{
+    font-family: 'Cabin', sans-serif;
     margin: 0px;
 }
 
@@ -83,23 +84,43 @@ body{
 
 }
 
+.image-text-wrapper .Subtitle{
+    transition: 1s;
+    color: transparent;
+    font-weight: 600;
+}
+ .image-blur{
+    transition: 1s;
+    filter:brightness(10%);
+ }
+ .image-text-wrapper:hover .Subtitle{
+    color: blanchedalmond;
+    font-weight: 600;
+ }
+
 .logo-wrapper img{
     width: 50%;
     margin-bottom: 20px;
-
 }
 
-.img-text-wrapper .Subtitle{
-    transition: 1s;
-    font-weight: 800;
-    color: transparent;
-}
-.img-text-wrapper:hover .Subtitle{
-    font-weight: 800;
-    color: aliceblue;
-
-}
-.img-darken{
+.img-darken {
     transition: 1s;
     filter: brightness(10%);
+}
+
+/*ABOUT Page Styles*/
+
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile-image-wrapper img {
+width: 100%;
+}
+
+.profile-content-wrapper{
+    padding: 30px;
+}
+.profile-content wrapper h1{
+    color: blue;
 }
