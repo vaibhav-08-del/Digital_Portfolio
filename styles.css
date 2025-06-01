@@ -16,6 +16,10 @@ body{
     padding: 38px;
 }
 
+.nav-wrapper{
+    background-color: black;
+}
+
 .left-hand{
     display: flex;
 }
@@ -34,23 +38,23 @@ body{
 }
 
 .nav-link-wrapper a{
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.5s;
 }
 
 .nav-link-wrapper:hover {
-    border-bottom: 1px solid brown;
+    border-bottom: 1px solid yellow;
 }
 
 .nav-link-wrapper a:hover {
-    color: brown;
+    color: yellow;
 }
 .active-nav-link{
-    border-bottom:1px solid black;
+    border-bottom:1px solid yellow;
 }
 .active-nav-link a{
-    color: black !important;
+    color: yellow !important;
 }
 /* Portfolio Styles*/
 .portfolio-items-wrapper{
@@ -108,21 +112,81 @@ body{
     filter: brightness(10%);
 }
 
+/*BLOG Page Style*/
+.information{
+   background-color: black;
+   color: aliceblue;
+   display: grid;
+   grid-template-columns: 1fr;
+   line-height: 1.6;
+   padding: 20px;           
+} 
+
+
+
+
 /*ABOUT Page Styles*/
 
-.two-column-wrapper{
+.content-wrapper {
+    background-color: black;
+    color: aliceblue;
+   display: grid;
+   grid-template-columns: 1fr;
+   line-height: 1.6;
+   padding: 20px; 
+}
+
+/*VAIBHAV REDDY PAGE STYLE*/
+.Vcontainer {
+    background-color: black;
+    color: aliceblue;
+   display: grid;
+   grid-template-columns: 1fr;
+   line-height: 1.6;
+   padding: 20px; 
+}
+
+a {
+    text-decoration: none;
+    color: #DB4437; /* Gmail red color */
+    font-size: 24px;
+  }
+  
+  a i {
+    margin: right 2px; /* Space between icon and text */
+  }
+  
+  a:hover {
+    color: #C1351D; /* Darker Gmail red on hover */
+  }
+
+/*Work Page Style*/
+.work-container {
+    background-color: black;
+    color: aliceblue;
+   display: grid;
+   grid-template-columns: 1fr;
+   line-height: 1.6;
+   padding: 20px; 
+   
+}
+
+/*Profile Page Style*/
+.Info-Wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.profile-image-wrapper img {
-width: 100%;
+
+.Info-Image-Wrapper img {
+    width:100%;
 }
 
-.profile-content-wrapper{
+.Info-Content-Wrapper{
     padding: 30px;
 }
-.profile-content wrapper h1{
-    color: blue;
+
+.Info-Content-Wrapper h1{
+    Color: rgb(0, 0, 0);
 }
 
 /*Project Page Style*/
