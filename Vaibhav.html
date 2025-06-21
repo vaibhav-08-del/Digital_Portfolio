@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Vaibhav Reddy | Portfolio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+   <style>
+      body {
+         background: #111;
+         color: #f3f3f3;
+         font-family: 'Cabin', sans-serif;
+         margin: 0;
+      }
+      .container { max-width: 1100px; margin: 0 auto; }
+      .nav-wrapper {
+         display: flex; justify-content: space-between; align-items: center;
+         padding: 20px 0;
+      }
+      .left-hand, .right-hand { display: flex; gap: 20px; }
+      .nav-link-wrapper a {
+         color: #f3f3f3; text-decoration: none; padding: 8px 14px; border-radius: 4px;
+         transition: background 0.2s;
+      }
+      .nav-link-wrapper.active-nav-link a, .nav-link-wrapper a:hover {
+         background: #222;
+      }
+      .content-wrapper {
+         background: #181818;
+         border-radius: 12px;
+         padding: 40px 30px;
+         margin: 30px 0;
+         box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      }
+      header h1 {
+         font-size: 2rem;
+         margin-bottom: 10px;
+         color: #ffd700;
+      }
+      section {
+         margin-bottom: 28px;
+      }
+      h2 {
+         color: #ffb300;
+         margin-top: 24px;
+      }
+      ul, ol {
+         margin-left: 20px;
+      }
+      .highlight {
+         background: #222;
+         padding: 12px 18px;
+         border-left: 4px solid #ffd700;
+         border-radius: 6px;
+         margin: 18px 0;
+      }
+      @media (max-width: 700px) {
+         .content-wrapper { padding: 18px 6px; }
+         .nav-wrapper { flex-direction: column; gap: 10px; }
+      }
+      .tips {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 18px;
+      }
+      .tip-card {
+         background: #222;
+         border-radius: 8px;
+         padding: 16px;
+         flex: 1 1 220px;
+         min-width: 220px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      }
+      .tip-card strong { color: #ffd700; }
+      .my-story-container {
+         max-width: 1100px;
+         margin: 0 auto;
+         background: #23272f;
+         border-radius: 12px;
+         box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+         margin-top: 32px;
+         padding: 30px 0;
+      }
+      .main-title {
+         text-align: center;
+         color: #ffd700;
+         margin-bottom: 40px;
+      }
+      .cards-container {
+         display: flex;
+         flex-direction: column;
+         gap: 32px;
+      }
+      .card {
+         background: #181818;
+         border-radius: 12px;
+         padding: 32px 28px;
+         box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      }
+      .card-title {
+         color: #ffb300;
+         margin-top: 0;
+         margin-bottom: 18px;
+         font-size: 1.3rem;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         flex-wrap: wrap;
+      }
+      .timeline-date {
+         font-size: 1rem;
+         color: #ffd700;
+         margin-left: 10px;
+      }
+      .university-logo, .company-logo {
+         margin-left: 10px;
+         vertical-align: middle;
+         height: 1.5em;
+      }
+      .card p {
+         text-align: justify;
+         margin-bottom: 14px;
+      }
+      @media (max-width: 700px) {
+         .my-story-container, .container { padding: 8px; }
+         .cards-container { gap: 18px; }
+         .card { padding: 16px 8px; }
+         .main-title { font-size: 1.3rem; }
+      }
+      .Vcontainer {
+         max-width: 700px;
+         margin: 40px auto;
+         background: #181818;
+         border-radius: 12px;
+         box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+         padding: 32px 24px;
+         text-align: center;
+      }
+      .Vcontainer h1 {
+         color: #ffd700;
+         margin-bottom: 18px;
+      }
+      .Vcontainer p {
+         text-align: justify;
+         margin-bottom: 18px;
+      }
+      .MyPhot img {
+         border-radius: 100%;
+         display: block;
+         margin: 20px auto 0 auto;
+         width: 220px;
+         height: 220px;
+         object-fit: cover;
+         box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+      }
+      .cta {
+         margin-top: 24px;
+         display: flex;
+         justify-content: center;
+         gap: 28px;
+      }
+      .cta img {
+         width: 40px;
+         height: 40px;
+         transition: transform 0.2s;
+      }
+      .cta img:hover {
+         transform: scale(1.12);
+      }
+      @media (max-width: 700px) {
+         .Vcontainer { padding: 12px 4px; }
+         .MyPhot img { width: 120px; height: 120px; }
+         .cta { gap: 14px; }
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <nav class="nav-wrapper">
+         <div class="left-hand">
+            <div class="nav-link-wrapper">
+               <a href="index.html">Home</a>
+            </div>
+            <div class="nav-link-wrapper">
+               <a href="about.html">About</a>
+            </div>
+            <div class="nav-link-wrapper">
+               <a href="Blog.html">Blog</a>
+            </div>
+            <div class="nav-link-wrapper">
+               <a href="MY STORY.html">My Story</a>
+            </div>
+         </div>
+         <div class="right-hand">
+            <div class="nav-link-wrapper active-nav-link">
+               <a href="Vaibhav.html">Vaibhav Reddy</a>
+            </div>
+         </div>
+      </nav>
+   </div>
+
+   <div class="Vcontainer">
+      <h1>Thank you for visiting!</h1>
+      <p>
+         What sets me apart is my commitment to craftsmanship and my ability to think outside the box. Whether it’s a bold design, an innovative website, or a captivating visual story, I pour my heart and soul into each piece, ensuring that every project is a true reflection of my dedication to excellence.
+      </p>
+      <p>
+         Take a look around, explore my work, and don’t hesitate to reach out if you’re interested in collaborating. Let’s create something incredible together.<br>
+         You can reach out to me through any of the social media platforms listed below.
+      </p>
+      <div class="MyPhot">
+         <img src="Images/Vaibhav.png" alt="Vaibhav Reddy's Photo">
+      </div>
+      <div class="cta">
+         <a href="mailto:vaibhavreddy108@gmail.com" target="_blank">
+            <img src="Images/Mail.png" alt="Mail">
+         </a>
+         <a href="https://www.linkedin.com/in/m-vaibhav-reddy-091350201/" target="_blank">
+            <img src="Images/LinkedIn.png" alt="LinkedIn">
+         </a>
+         <a href="https://in.pinterest.com/vaibhavreddy108/_profile/" target="_blank">
+            <img src="Images/Pintrest.png" alt="Pinterest">
+         </a>
+         <a href="https://github.com/vaibhav-08-del" target="_blank">
+            <img src="Images/Github.png" alt="Github">
+         </a>
+         <a href="https://www.instagram.com/vaibhavreddy.08/" target="_blank">
+            <img src="Images/Insta.png" alt="Instagram">
+         </a>
+      </div>
+   </div>
+</body>
+</html>

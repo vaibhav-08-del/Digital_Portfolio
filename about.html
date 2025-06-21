@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>About | Vaibhav Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #111;
+            color: #f3f3f3;
+            font-family: 'Cabin', sans-serif;
+            margin: 0;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .nav-wrapper {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 0;
+        }
+        .left-hand, .right-hand { display: flex; gap: 20px; }
+        .nav-link-wrapper a {
+            color: #f3f3f3; text-decoration: none; padding: 8px 14px; border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .nav-link-wrapper.active-nav-link a, .nav-link-wrapper a:hover {
+            background: #222;
+        }
+        .content-wrapper {
+            background: #181818;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            color: #ffb300;
+            margin-top: 24px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .highlight {
+            background: #222;
+            padding: 12px 18px;
+            border-left: 4px solid #ffd700;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+        @media (max-width: 700px) {
+            .content-wrapper { padding: 18px 6px; }
+            .nav-wrapper { flex-direction: column; gap: 10px; }
+        }
+        .tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .tip-card {
+            background: #222;
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1 1 220px;
+            min-width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .tip-card strong { color: #ffd700; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-hand">
+                <div class="nav-link-wrapper"><a href="index.html">Home</a></div>
+                <div class="nav-link-wrapper active-nav-link"><a href="about.html">About</a></div>
+                <div class="nav-link-wrapper"><a href="Blog.html">Blog</a></div>
+                <div class="nav-link-wrapper"><a href="MY STORY.html">My Story</a></div>
+            </div>
+            <div class="right-hand">
+                <div class="nav-link-wrapper"><a href="Vaibhav.html">Vaibhav Reddy</a></div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <header>
+                <h1>About This Portfolio</h1>
+            </header>
+            <section>
+                <div class="highlight">
+                    <strong>Welcome!</strong> This site showcases my best work in design, development, and photography. It’s built with HTML, CSS, and JavaScript—demonstrating how foundational web skills and AI tools can bring ideas to life quickly.
+                </div>
+                <p>
+                    My goal is to turn unique ideas into impactful results. Each project is a chance to push boundaries, learn, and create something meaningful. I value creativity, collaboration, and attention to detail.
+                </p>
+            </section>
+            <section>
+                <h2>Why Your Online Presence Matters</h2>
+                <p>
+                    In today’s digital world, your online presence is your first impression. Whether you’re a student, professional, or entrepreneur, a strong digital profile opens doors for networking, career growth, and personal branding.
+                </p>
+            </section>
+            <section>
+                <h2>How to Build & Market Your Digital Identity</h2>
+                <div class="tips">
+                    <div class="tip-card">
+                        <strong>Define Your Brand</strong>
+                        <p>Decide what you want to be known for. Align your content and messaging with your skills and passions.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Be Consistent</strong>
+                        <p>Use similar visuals and tone across platforms. Consistency builds recognition and trust.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Share Your Journey</strong>
+                        <p>Showcase not just achievements, but also your learning process and challenges. Authentic stories connect best.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Engage & Network</strong>
+                        <p>Interact with your audience and peers. Building relationships is key to growth.</p>
+                    </div>
+                    <div class="tip-card">
+                        <strong>Keep Learning</strong>
+                        <p>Stay updated with trends and tools. Continuous learning keeps your profile relevant.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Benefits of a Strong Online Presence</h2>
+                <ul>
+                    <li><strong>Networking:</strong> Connect with global peers and mentors.</li>
+                    <li><strong>Career Growth:</strong> Attract job and freelance opportunities.</li>
+                    <li><strong>Credibility:</strong> Establish yourself as an expert by sharing valuable insights.</li>
+                    <li><strong>Personal Growth:</strong> Reflect on your journey and clarify your goals.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Final Thoughts</h2>
+                <p>
+                    Your online presence is your digital voice. Be authentic, share your story, and engage with others. With the right mindset and tools, anyone can build a meaningful digital identity.
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

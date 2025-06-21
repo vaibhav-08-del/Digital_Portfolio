@@ -1,0 +1,261 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>My Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+        body {
+            background: #181818;
+            color: #b0b0b0;
+            font-family: 'Cabin', sans-serif;
+            margin: 0;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .nav-wrapper {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 0;
+        }
+        .left-hand, .right-hand { display: flex; gap: 20px; }
+        .nav-link-wrapper a {
+            color: #f3f3f3; text-decoration: none; padding: 8px 14px; border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .nav-link-wrapper.active-nav-link a, .nav-link-wrapper a:hover {
+            background: #222;
+        }
+        .content-wrapper {
+            background: #0f0f0f;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            color: #ffb300;
+            margin-top: 24px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .highlight {
+            background: #222;
+            padding: 12px 18px;
+            border-left: 4px solid #ffd700;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+        @media (max-width: 700px) {
+            .content-wrapper { padding: 18px 6px; }
+            .nav-wrapper { flex-direction: column; gap: 10px; }
+        }
+        .tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .tip-card {
+            background: #222;
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1 1 220px;
+            min-width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .tip-card strong { color: #ffd700; }
+        /* Added styles for justification and card layout */
+        .my-story-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #181818;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+            margin-top: 32px;
+            background: #23272f;
+            padding: 30px 0;
+        }
+        .main-title {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 40px;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .card {
+            background: #181818;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        .card-title {
+            color: #ffb300;
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .timeline-date {
+            font-size: 1rem;
+            color: #ffd700;
+            margin-left: 10px;
+        }
+        .university-logo, .company-logo {
+            margin-left: 10px;
+            vertical-align: middle;
+            height: 1.5em;
+        }
+        .card p {
+            text-align: justify;
+            margin-bottom: 14px;
+        }
+        @media (max-width: 700px) {
+            .my-story-container, .container { padding: 8px; }
+            .cards-container { gap: 18px; }
+            .card { padding: 16px 8px; }
+            .main-title { font-size: 1.3rem; }
+        }
+        /* End of added styles */
+        </style>
+</head>
+
+<body style="background-color:black">
+  <div class="container">
+    <div class="nav-wrapper"> 
+      <div class="left-hand">
+        <div class="nav-link-wrapper">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="Blog.html">Blog</a>
+        </div>
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="My Story.html">My Story</a>
+        </div>
+      </div>
+      <div class="right-hand">
+        <div class="nav-link-wrapper">
+          <a href="Vaibhav.html">Vaibhav Reddy</a>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="my-story-container">
+    <h1 class="main-title">My 25 years of journey</h1>
+
+    <style>
+      /* Unique hyperlink style */
+      .unique-link {
+        color: #ffd700;
+        background: linear-gradient(90deg, #23272f 60%, #ffb300 100%);
+        padding: 3px 10px;
+        border-radius: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.15);
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .unique-link::after {
+        content: '';
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        background: rgba(255,255,255,0.08);
+        border-radius: 18px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
+      .unique-link:hover, .unique-link:focus {
+        color: #23272f;
+        background: linear-gradient(90deg, #ffd700 60%, #ffb300 100%);
+        box-shadow: 0 4px 16px rgba(255, 215, 0, 0.25);
+      }
+      .unique-link:hover::after, .unique-link:focus::after {
+        opacity: 1;
+      }
+      .card-title .unique-link {
+        margin-left: 10px;
+        font-size: 0.95em;
+        vertical-align: middle;
+      }
+    </style>
+
+    <div class="cards-container">
+      <div class="card">
+        <h2 class="card-title">
+          Koneru Lakshmaiah University (KLU)
+          <span class="timeline-date">(2017 - 2021)</span>
+          <img src="Images/KLU.png" alt="KLU Logo" class="university-logo">
+          <a href="https://www.kluniversity.in" target="_blank" class="unique-link">KLU</a>
+        </h2>
+        <p>
+          I graduated from KLU with a Bachelor's degree in Electronics and Communication Engineering (ECE).
+          My time at KLU provided me with a strong foundation in electronics, communication systems, and programming, 
+          preparing me for a career in technology and engineering.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">
+          Shalom Enterprises
+          <span class="timeline-date">(2019, 3-4 months)</span>
+          <img src="Images/shalom.png" alt="Shalom Enterprises Logo" class="company-logo">
+          <a href="http://shalomsystems.net" target="_blank" class="unique-link">Shalom Enterprises</a>
+        </h2>
+        <p>
+          I had the opportunity to work as an Intern at Shalom Enterprises, a company specializing in advanced security systems and access control equipment. During my internship, I gained valuable insights into the security industry and the importance of reliable security solutions. I learned how microchips are coded using C++ and how they are integrated into security systems, broadening my understanding of technology and its applications in various fields.
+        </p>
+        <p>
+          Shalom Enterprises, established in 1994 and headquartered in Hyderabad, is a leading manufacturer of advanced security systems and access control equipment. The company has built a global reputation for delivering high-quality, reliable, and customizable security solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">
+          Model N
+          <span class="timeline-date">(2021 - Present)</span>
+          <img src="Images/Model_N.jpg" alt="Model N Logo" class="company-logo">
+          <a href="https://www.modeln.com" class="unique-link">Model N</a>
+        </h2>
+        <p>
+          I am currently working as a Technical Engineer 1 at Model N. I joined the company as a fresh graduate and have been honing my skills and gaining valuable experience over the past few years. Although I am still in the early stages of my career, with less than three years of work experience, I am eager to learn, grow, and contribute to innovative solutions in the field.
+        </p>
+        <p>
+          Working as a Technical Engineer has really helped me to understand the customer point of view and how Operations teams work in a SAAS organization.
+        </p>
+        <p>
+          Model N is a leading provider of cloud-based revenue management solutions for life sciences and high-tech companies. The company helps organizations maximize revenues, improve compliance, and streamline complex business processes by offering innovative software products tailored to industry needs. Model N's solutions enable businesses to manage pricing, contracting, incentives, and regulatory requirements efficiently, supporting growth and operational excellence in a rapidly changing market.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Personal Projects <span class="timeline-date">(2024 - No Endings)</span></h2>
+        <p>
+          [Add your personal projects here, describing your work, technologies used, and what you learned.]
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
