@@ -1,0 +1,171 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Blog | Vaibhav Reddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ... your existing styles ... */
+        body {
+            background: #111;
+            color: #f3f3f3;
+            font-family: 'Cabin', sans-serif;
+            margin: 0;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .nav-wrapper {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 0;
+        }
+        .left-hand, .right-hand { display: flex; gap: 20px; }
+        .nav-link-wrapper a {
+            color: #f3f3f3; text-decoration: none; padding: 8px 14px; border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .nav-link-wrapper.active-nav-link a, .nav-link-wrapper a:hover {
+            background: #222;
+        }
+        .content-wrapper {
+            background: #181818;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            color: #ffb300;
+            margin-top: 24px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .highlight {
+            background: #222;
+            padding: 12px 18px;
+            border-left: 4px solid #ffd700;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+        @media (max-width: 700px) {
+            .content-wrapper { padding: 18px 6px; }
+            .nav-wrapper { flex-direction: column; gap: 10px; }
+        }
+        .tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .tip-card {
+            background: #222;
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1 1 220px;
+            min-width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .tip-card strong { color: #ffd700; }
+        .my-story-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #181818;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+            margin-top: 32px;
+            background: #23272f;
+            padding: 30px 0;
+        }
+        .main-title {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 40px;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .card {
+            background: #181818;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        .card-title {
+            color: #ffb300;
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .timeline-date {
+            font-size: 1rem;
+            color: #ffd700;
+            margin-left: 10px;
+        }
+        .university-logo, .company-logo {
+            margin-left: 10px;
+            vertical-align: middle;
+            height: 1.5em;
+        }
+        .card p {
+            text-align: justify;
+            margin-bottom: 14px;
+        }
+        @media (max-width: 700px) {
+            .my-story-container, .container { padding: 8px; }
+            .cards-container { gap: 18px; }
+            .card { padding: 16px 8px; }
+            .main-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper"> 
+            <div class="left-hand">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="Blog.html">Blog</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="MY STORY.html">My Story</a>
+                </div>
+            </div>
+            <div class="right-hand">
+                <div class="nav-link-wrapper">
+                    <a href="Vaibhav.html">Vaibhav Reddy</a>
+                </div>
+            </div>      
+        </div>
+        <div class="content-wrapper">
+            <header>
+                <h1>FLASH UPDATE!!</h1>
+            </header>
+            <section>
+                <p>Hey there! I just wanted to let you know that I am currently working on a new blog post. It will be available soon, so stay tuned!</p>
+                <p>In the meantime, feel free to explore my other blog posts and projects. Thank you for your patience!</p>
+                <p>Best regards,</p>
+                <p>Vaibhav Reddy</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
