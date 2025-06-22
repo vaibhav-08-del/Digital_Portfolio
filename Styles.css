@@ -1,0 +1,216 @@
+/*Master Styles*/
+body{
+    font-family: 'Cabin', sans-serif;
+    margin: 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*Navigation Bar Styles*/
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.nav-wrapper{
+    background-color: black;
+}
+
+.left-hand{
+    display: flex;
+}
+
+.nav-wrapper > .left-hand > div {
+
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottem 0.5s;
+}
+
+.nav-link-wrapper a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid yellow;
+}
+
+.nav-link-wrapper a:hover {
+    color: yellow;
+}
+.active-nav-link{
+    border-bottom:1px solid yellow;
+}
+.active-nav-link a{
+    color: yellow !important;
+}
+
+/*Project Page Style*/
+/* Position the entire group on the left side */
+.background-div {
+    background-image: url('Images/Project.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the left */
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Tooltip container (one block per line) */
+  .tooltip-container {
+    position: relative;
+    display: flex; /* Changed to flex for horizontal alignment */
+    align-items: center; /* Vertically align tooltip and title */
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Trigger (the title) */
+  .tooltip-trigger {
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* On hover */
+  .tooltip-trigger:hover {
+    background-color: beige;
+  }
+  
+  /* Tooltip */
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 100%; /* Appear to the right of the title */
+    margin-left: 10px; /* Gap between title and tooltip */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+  }
+  
+  /* Show tooltip on hover */
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  
+/*Carrer Page Style*/
+.Carrer-Wrapper {
+    background-image: url('Images/Carrer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+
+/*Hobbies Page Style*/
+.Hobbies-Wrapper {
+    background-image: url('Images/Hobbies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+
+/*Photos Pages Style*/
+.Photo-Wrapper {
+    background-image: url('Images/Photography.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+/*Papers Page Style*/
+.Papers-Wrapper {
+    background-image: url('Images/papers.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+
+/*Bussiness Pages Style*/
+.Bussiness-Wrapper {
+    background-image: url('Images/CaseStudies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+
+/*Connections Page Style*/
+.Connections-Wrapper {
+    background-image: url('Images/Connections.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+/*Read Page Style*/
+.Read-Wrapper {
+    background-image: url('Images/Blogs.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }
+/*Future Page Style*/
+.Future-Wrapper {
+    background-image: url('Images/Goals.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 40px; /* Add some padding for spacing */
+  }

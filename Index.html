@@ -1,0 +1,292 @@
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>Page title</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+   <style>
+      body {
+         background: #111;
+         color: #f3f3f3;
+         font-family: 'Cabin', sans-serif;
+         margin: 0;
+      }
+      .container { max-width: 1100px; margin: 0 auto; }
+      .nav-wrapper {
+         display: flex; justify-content: space-between; align-items: center;
+         padding: 20px 0;
+      }
+      .left-hand, .right-hand { display: flex; gap: 20px; }
+      .nav-link-wrapper a {
+         color: #f3f3f3; text-decoration: none; padding: 8px 14px; border-radius: 4px;
+         transition: background 0.2s;
+      }
+      .nav-link-wrapper.active-nav-link a, .nav-link-wrapper a:hover {
+         background: #222;
+      }
+      .content-wrapper {
+         background: #181818;
+         border-radius: 12px;
+         padding: 40px 30px;
+         margin: 30px 0;
+         box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      }
+      header h1 {
+         font-size: 2rem;
+         margin-bottom: 10px;
+         color: #ffd700;
+      }
+      section {
+         margin-bottom: 28px;
+      }
+      h2 {
+         color: #ffb300;
+         margin-top: 24px;
+      }
+      ul, ol {
+         margin-left: 20px;
+      }
+      .highlight {
+         background: #222;
+         padding: 12px 18px;
+         border-left: 4px solid #ffd700;
+         border-radius: 6px;
+         margin: 18px 0;
+      }
+      @media (max-width: 700px) {
+         .content-wrapper { padding: 18px 6px; }
+         .nav-wrapper { flex-direction: column; gap: 10px; }
+      }
+      .tips {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 18px;
+      }
+      .tip-card {
+         background: #222;
+         border-radius: 8px;
+         padding: 16px;
+         flex: 1 1 220px;
+         min-width: 220px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      }
+      .tip-card strong { color: #ffd700; }
+      /* Added for hover effect */
+      .img-darken {
+         filter: brightness(0.6);
+         transition: filter 0.3s;
+      }
+      .portfolio-items-wrapper {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 24px;
+         justify-content: space-between;
+      }
+      .portfolio-item-wrapper {
+         background: #222;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+         width: calc(33% - 16px);
+         min-width: 260px;
+         margin-bottom: 24px;
+         display: flex;
+         flex-direction: column;
+         transition: transform 0.2s;
+      }
+      .portfolio-item-wrapper:hover {
+         transform: translateY(-6px) scale(1.03);
+      }
+      .portfolio-img-background {
+         height: 140px;
+         background-size: cover;
+         background-position: center;
+         transition: filter 0.3s;
+      }
+      .image-text-wrapper {
+         padding: 18px 14px 14px 14px;
+         display: flex;
+         align-items: center;
+         gap: 14px;
+      }
+      .logo-wrapper img {
+         width: 48px;
+         height: 48px;
+         border-radius: 6px;
+         background: #181818;
+         object-fit: contain;
+      }
+      .subtitle {
+         color: #ffd700;
+         font-size: 1rem;
+         margin-top: 4px;
+      }
+      @media (max-width: 900px) {
+         .portfolio-item-wrapper { width: 100%; min-width: unset; }
+         .portfolio-items-wrapper { flex-direction: column; gap: 18px; }
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-background" style="background-image:url(Images/Nav-Bar.jpg)">
+         <nav class="nav-wrapper">
+            <div class="left-hand">
+               <div class="nav-link-wrapper active-nav-link">
+                  <a href="index.html">Home</a>
+               </div>
+               <div class="nav-link-wrapper">
+                  <a href="about.html">About</a>
+               </div>
+               <div class="nav-link-wrapper">
+                  <a href="Blog.html">Blog</a>
+               </div>
+               <div class="nav-link-wrapper">
+                  <a href="MY STORY.html">My Story</a>
+               </div>
+            </div>
+            <div class="right-hand">
+               <div class="nav-link-wrapper">
+                  <a href="Vaibhav.html">Vaibhav Reddy</a>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div class="content-wrapper">
+         <div class="portfolio-items-wrapper">
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Project.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/logo/project.png" alt="Project Logo"> 
+                  </div> -->
+                  <a href="Projects.html">
+                     <div class="subtitle">
+                        Deep dive into all the projects curated by me throughout my career.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/papers.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/logo/Paper.png" alt="Papers Logo">
+                  </div> -->
+                  <a href="Papers.html">
+                     <div class="subtitle">
+                        An overview of all the research papers I referred and wrote.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Carrer.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/Carrer2.png" alt="Career Logo">
+                  </div> -->
+                  <a href="carrer.html">
+                     <div class="subtitle">
+                        My corporate career information and my achievements.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Blogs.jpg)"></div>
+               <div class="image-text-wrapper">
+                    <!-- <div class="logo-wrapper">
+                      <img src="Images/project2.png" alt="Blog Logo">
+                    </div> -->
+                  <a href="Read.html">
+                     <div class="subtitle">
+                        My interests in writing that need some attention.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Hobbies.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/project2.png" alt="Hobbies Logo">
+                  </div> -->
+                  <a href="Hobbies.html">
+                     <div class="subtitle">
+                        Hobbies.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Connections.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/project2.png" alt="Connections Logo">
+                  </div> -->
+                  <a href="connections.html">
+                     <div class="subtitle">
+                        My Connections.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Photography.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/project2.png" alt="Photography Logo">
+                  </div> -->
+                  <a href="Lenses.html">
+                     <div class="subtitle">
+                        My interests about lenses.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/CaseStudies.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/project2.png" alt="Case Studies Logo">
+                  </div> -->
+                  <a href="Bussiness.html">
+                     <div class="subtitle">
+                        Different Business Scenarios that I went across.
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+               <div class="portfolio-img-background" style="background-image:url(Images/Goals.jpg)"></div>
+               <div class="image-text-wrapper">
+                  <!-- <div class="logo-wrapper">
+                     <img src="Images/project2.png" alt="Goals Logo">
+                  </div> -->
+                  <a href="Future.html">
+                     <div class="subtitle">
+                        Future Goals and Projects.
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<script>
+   const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+   portfolioItems.forEach(portfolioItem => {
+      const imgBg = portfolioItem.querySelector('.portfolio-img-background');
+      portfolioItem.addEventListener('mouseover', () => {
+         imgBg.classList.add('img-darken');
+      });
+      portfolioItem.addEventListener('mouseout', () => {
+         imgBg.classList.remove('img-darken');
+      });
+   });
+</script>
+</body>
+</html>
