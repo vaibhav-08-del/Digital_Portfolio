@@ -1,38 +1,265 @@
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Page title</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-        <link rel ="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tooltip Example</title>
-        
-     </head>
-    <body>
-        <div class="Bussiness-Wrapper">
-            <h1>My Business Journey</h1>
-            <div class="timeline-container">
-                <div class="year-marker">
-                    <div class="year">2018</div>
-                    <div class="tooltip">Founded my first startup, focusing on e-commerce solutions.</div>
-                </div>
-                <div class="year-marker">
-                    <div class="year">2019</div>
-                    <div class="tooltip">Expanded the business to include digital marketing services.</div>
-                </div>
-                <div class="year-marker">
-                    <div class="year">2020</div>
-                    <div class="tooltip">Launched a new product line, increasing revenue by 30%.</div>
-                </div>
-                <div class="year-marker">
-                    <div class="year">2021</div>
-                    <div class="tooltip">Secured Series A funding to scale operations and hire more staff.</div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Clients & Partners - Business Journeys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Cabin', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('Images/CaseStudies.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 1000px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .feedback-slideshow {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 30px 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+        .feedback-slide {
+            display: none;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .feedback-slide.active {
+            display: block;
+        }
+        .feedback-controls {
+            margin-top: 15px;
+        }
+        .feedback-controls button {
+            background: #0078d4;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2em;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+        .tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+        .project-tile {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 24px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .project-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0078d4;
+        }
+        .project-journey {
+            font-size: 1em;
+            margin-bottom: 12px;
+            color: #444;
+        }
+        .project-revenue {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #22863a;
+            margin-bottom: 8px;
+        }
+        .partners {
+            margin-top: 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 24px 18px;
+        }
+        .partners-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #0078d4;
+        }
+        .partners-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .partner-logo {
+            width: 80px;
+            height: 80px;
+            background: #eaeaea;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Feedback Slideshow -->
+        <div class="feedback-slideshow">
+            <div class="feedback-slide active">
+                "The e-commerce platform exceeded our expectations. Seamless experience!"<br>
+                <strong>- Alex, Project Alpha</strong>
             </div>
-        </div>            
+            <div class="feedback-slide">
+                "Our online engagement grew by 50% thanks to their marketing expertise."<br>
+                <strong>- Priya, Project Beta</strong>
+            </div>
+            <div class="feedback-slide">
+                "The mobile app is intuitive and reliable. Our users love it!"<br>
+                <strong>- John, Project Gamma</strong>
+            </div>
+            <div class="feedback-slide">
+                "SEO services brought us to the first page of search results."<br>
+                <strong>- Sara, Project Delta</strong>
+            </div>
+            <div class="feedback-slide">
+                "Analytics integration helped us make data-driven decisions."<br>
+                <strong>- Mike, Project Epsilon</strong>
+            </div>
+            <div class="feedback-slide">
+                "Support team is always responsive and helpful."<br>
+                <strong>- Emma, Project Zeta</strong>
+            </div>
+            <div class="feedback-slide">
+                "Our revenue doubled after the new website launch."<br>
+                <strong>- Raj, Project Eta</strong>
+            </div>
+            <div class="feedback-slide">
+                "Content marketing brought us new leads every week."<br>
+                <strong>- Linda, Project Theta</strong>
+            </div>
+            <div class="feedback-slide">
+                "Custom solutions tailored perfectly to our needs."<br>
+                <strong>- Omar, Project Iota</strong>
+            </div>
+            <div class="feedback-slide">
+                "A true partner in our digital transformation journey."<br>
+                <strong>- Chloe, Project Kappa</strong>
+            </div>
+            <div class="feedback-controls">
+                <button id="prev">&#8592;</button>
+                <button id="next">&#8594;</button>
+            </div>
+        </div>
 
-                
-    </body>
+        <!-- Project Tiles -->
+        <div class="tiles-grid">
+            <div class="project-tile">
+                <div class="project-title">Project Alpha</div>
+                <div class="project-journey">Developed a robust e-commerce platform with integrated analytics and payment gateway.</div>
+                <div class="project-revenue">Revenue Generated: $250,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Beta</div>
+                <div class="project-journey">Launched multi-channel digital marketing campaigns, boosting engagement by 50%.</div>
+                <div class="project-revenue">Revenue Generated: $180,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Gamma</div>
+                <div class="project-journey">Designed and released a custom mobile app, reaching 100,000 downloads.</div>
+                <div class="project-revenue">Revenue Generated: $120,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Delta</div>
+                <div class="project-journey">Implemented SEO strategies, achieving top search rankings.</div>
+                <div class="project-revenue">Revenue Generated: $90,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Epsilon</div>
+                <div class="project-journey">Integrated advanced analytics for actionable business insights.</div>
+                <div class="project-revenue">Revenue Generated: $75,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Zeta</div>
+                <div class="project-journey">Provided ongoing support and feature enhancements for client platforms.</div>
+                <div class="project-revenue">Revenue Generated: $60,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Eta</div>
+                <div class="project-journey">Redesigned website, resulting in doubled revenue for the client.</div>
+                <div class="project-revenue">Revenue Generated: $110,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Theta</div>
+                <div class="project-journey">Launched content marketing campaigns, generating consistent leads.</div>
+                <div class="project-revenue">Revenue Generated: $85,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Iota</div>
+                <div class="project-journey">Delivered custom digital solutions tailored to unique business needs.</div>
+                <div class="project-revenue">Revenue Generated: $95,000</div>
+            </div>
+            <div class="project-tile">
+                <div class="project-title">Project Kappa</div>
+                <div class="project-journey">Partnered in digital transformation, modernizing legacy systems.</div>
+                <div class="project-revenue">Revenue Generated: $130,000</div>
+            </div>
+        </div>
+
+        <!-- Partners Section -->
+        <div class="partners">
+            <div class="partners-title">Our Partners</div>
+            <div class="partners-list">
+                <div class="partner-logo">Alpha Inc.</div>
+                <div class="partner-logo">Beta Corp.</div>
+                <div class="partner-logo">Gamma LLC</div>
+                <div class="partner-logo">Delta Ltd.</div>
+                <div class="partner-logo">Epsilon Group</div>
+                <div class="partner-logo">Zeta Solutions</div>
+                <div class="partner-logo">Eta Ventures</div>
+                <div class="partner-logo">Theta Partners</div>
+                <div class="partner-logo">Iota Tech</div>
+                <div class="partner-logo">Kappa Systems</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Simple feedback slideshow
+        const slides = document.querySelectorAll('.feedback-slide');
+        let current = 0;
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === idx);
+            });
+        }
+        document.getElementById('prev').onclick = function() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        };
+        document.getElementById('next').onclick = function() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        };
+        // Optional: auto-slide every 6 seconds
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 6000);
+    </script>
+</body>
 </html>

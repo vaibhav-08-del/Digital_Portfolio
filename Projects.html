@@ -1,38 +1,145 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Page title</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-        <link rel ="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tooltip Example</title>
-        
-     </head>
-    <body>
-        <div class="background-div">
-                    <div class="tooltip-container">
-                        <span class="tooltip-trigger">1.Machine Mind Faces</span>
-                            <div class="tooltip">This a advanced face recognition projects using Machine learning alogrithms.</div>
-                   </div>
-                   <div class="tooltip-container">
-                      <span class="tooltip-trigger">2.Digital Portfolio!</span>
-                        <div class="tooltip">My Digital portfolio which helps to provide an overview of my skills and strengts, this 
-                            is diffrent than the traditional old resume becuase it takes real skill to create one. </div>
-                    </div>
-                    <div class="tooltip-container">
-                        <span class="tooltip-trigger">3.CSR {Customer Satisfaction Rating}</span>
-                            <div class="tooltip">The Project aim is to provide an sigle platform for the product based companies to
-                                learn there customers and know there pain points. This is being desinged with the help of AI and ML. 
-                            </div>
-                   </div>
-                   <div class="tooltip-container">
-                        <span class="tooltip-trigger">4.FreeLance Portfolio</span>
-                        <div class="tooltip">Another project which helps me do free lance works !</div>
-                    </div>
-        </div>            
-
-                
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Cabin', sans-serif;
+        }
+        .background-div {
+            min-height: 100vh;
+            background: url('Images/Project.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 40px 0 40px 5vw;
+        }
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .tooltip-container {
+            position: relative;
+            width: fit-content;
+        }
+        .tooltip-trigger {
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 22px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .tooltip-trigger:hover, .tooltip-trigger:focus {
+            background: rgba(0,0,0,0.7);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        }
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            min-width: 320px;
+            max-width: 350px;
+            background: rgba(30, 30, 30, 0.97);
+            color: #fff;
+            text-align: left;
+            border-radius: 10px;
+            padding: 16px 22px;
+            position: absolute;
+            left: 110%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.30);
+            transition: opacity 0.3s, visibility 0.3s;
+            font-size: 1em;
+        }
+        .tooltip-container:hover .tooltip,
+        .tooltip-container:focus-within .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        /* Tooltip arrow (left side) */
+        .tooltip::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 10px 12px 10px 0;
+            border-style: solid;
+            border-color: transparent rgba(30,30,30,0.97) transparent transparent;
+        }
+        @media (max-width: 900px) {
+            .background-div {
+                padding-left: 2vw;
+            }
+            .tooltip {
+                min-width: 220px;
+                max-width: 90vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .background-div {
+                padding: 20px 0 20px 0;
+                align-items: center;
+            }
+            .projects-list {
+                margin-top: 10px;
+                gap: 18px;
+            }
+            .tooltip-container, .tooltip {
+                width: 95vw;
+                min-width: 0;
+                max-width: 98vw;
+            }
+            .tooltip {
+                left: 0;
+                top: 110%;
+                transform: none;
+            }
+            .tooltip::before {
+                left: 24px;
+                top: -10px;
+                transform: none;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent rgba(30,30,30,0.97) transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-div">
+        <div class="projects-list">
+            <div class="tooltip-container">
+                <span class="tooltip-trigger" tabindex="0">1. Machine Mind Faces</span>
+                <div class="tooltip">This is an advanced face recognition project using Machine Learning algorithms.</div>
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-trigger" tabindex="0">2. Digital Portfolio!</span>
+                <div class="tooltip">My digital portfolio provides an overview of my skills and strengths. This is different from the traditional resume because it takes real skill to create one.</div>
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-trigger" tabindex="0">3. CSR {Customer Satisfaction Rating}</span>
+                <div class="tooltip">The project aims to provide a single platform for product-based companies to learn about their customers and know their pain points. This is designed with the help of AI and ML.</div>
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-trigger" tabindex="0">4. FreeLance Portfolio</span>
+                <div class="tooltip">Another project which helps me do freelance work!</div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

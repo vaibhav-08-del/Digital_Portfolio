@@ -1,39 +1,140 @@
 <html>
 <head>
    <meta charset="utf-8" />
-   <title>Page title</title>
+   <title>Projects and Papers</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-   <link rel ="stylesheet" href="styles.css">
- </head>
- <body>
-   <div class="Papers-Wrapper"> 
-      <p>References:</p>
-      <ol>
-         <li><a href="URL_TO_PDF_1.pdf" target="_blank">Reference 1</a></li>
-         <li><a href="URL_TO_PDF_2.pdf" target="_blank">Reference 2</a></li>
-         <li><a href="URL_TO_PDF_3.pdf" target="_blank">Reference 3</a></li>
-         <li><a href="URL_TO_PDF_4.pdf" target="_blank">Reference 4</a></li>
-         <li><a href="URL_TO_PDF_5.pdf" target="_blank">Reference 5</a></li>
-         <li><a href="URL_TO_PDF_6.pdf" target="_blank">Reference 6</a></li>
-         <li><a href="URL_TO_PDF_7.pdf" target="_blank">Reference 7</a></li>
-         <li><a href="URL_TO_PDF_8.pdf" target="_blank">Reference 8</a></li>
-         <li><a href="URL_TO_PDF_9.pdf" target="_blank">Reference 9</a></li>
-         <li><a href="URL_TO_PDF_10.pdf" target="_blank">Reference 10</a></li>
-         <li><a href="URL_TO_PDF_11.pdf" target="_blank">Reference 11</a></li>
-         <li><a href="URL_TO_PDF_12.pdf" target="_blank">Reference 12</a></li>
-         <li><a href="URL_TO_PDF_13.pdf" target="_blank">Reference 13</a></li>
-         <li><a href="URL_TO_PDF_14.pdf" target="_blank">Reference 14</a></li>
-         <li><a href="URL_TO_PDF_15.pdf" target="_blank">Reference 15</a></li>
-         <li><a href="URL_TO_PDF_16.pdf" target="_blank">Reference 16</a></li>
-         <li><a href="URL_TO_PDF_17.pdf" target="_blank">Reference 17</a></li>
-         <li><a href="URL_TO_PDF_18.pdf" target="_blank">Reference 18</a></li>
-         <li><a href="URL_TO_PDF_19.pdf" target="_blank">Reference 19</a></li>
-         <li><a href="URL_TO_PDF_20.pdf" target="_blank">Reference 20</a></li>
-      </ol>
+   <link rel="stylesheet" href="styles.css">
+   <style>
+      body {
+         font-family: 'Cabin', sans-serif;
+         background: #fff url('Images/papers.jpg') no-repeat center center fixed;
+         background-size: cover;
+         margin: 0;
+         padding: 0;
+         color: #FFFDD0; /* Cream color */
+      }
+      .Projects-Wrapper {
+         max-width: 900px;
+         margin: 40px auto 0 40px;
+         padding: 32px;
+      }
+      .project-section {
+         margin-bottom: 48px;
+         border-left: 4px solid #FFFDD0; /* Cream border */
+         padding-left: 24px;
+      }
+      .project-title {
+         font-size: 2rem;
+         font-weight: bold;
+         margin-bottom: 12px;
+         color: #FFFDD0;
+         text-shadow: 1px 1px 4px #333; /* Improves visibility */
+      }
+      .subsection {
+         margin-bottom: 18px;
+      }
+      .subsection-title {
+         font-size: 1.2rem;
+         font-weight: 600;
+         color: #FFFDD0;
+         text-shadow: 1px 1px 3px #333;
+         margin-bottom: 6px;
+      }
+      ol, ul {
+         margin-left: 20px;
+      }
+      a {
+         color: #FFFDD0;
+         text-decoration: none;
+         text-shadow: 1px 1px 2px #333;
+      }
+      a:hover {
+         text-decoration: underline;
+      }
+      p, li {
+         color: #FFFDD0;
+         text-shadow: 1px 1px 2px #333;
+      }
+   </style>
+</head>
+<body>
+   <div class="Projects-Wrapper">
+      <!-- Project 1 -->
+      <section class="project-section">
+         <div class="project-title">Machine Mind Faces</div>
+         <div class="subsection">
+            <div class="subsection-title">About</div>
+            <p>This project is combination of Computer vison and Artifical Intelligence. It bring a new Algortihm in 
+               the world of machines to recognise faces and authetication </p>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">References</div>
+            <ol>
+               <li><a href="URL_TO_PDF_1.pdf" target="_blank">Reference 1</a></li>
+               <li><a href="URL_TO_PDF_2.pdf" target="_blank">Reference 2</a></li>
+            </ol>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Key Features</div>
+            <ul>
+               <li>Active Face Recognition</li>
+               <li>Security Upgrades</li>
+            </ul>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Technologies Used</div>
+            <ul>
+               <li>Machine learning Alogirithm</li>
+               <li>Pyton</li>
+            </ul>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Related Papers</div>
+            <ol>
+               <li><a href="URL_TO_PDF_3.pdf" target="_blank">Paper 1</a></li>
+            </ol>
+         </div>
+      </section>
+
+      <!-- Project 2 -->
+      <section class="project-section">
+         <div class="project-title">Project 2: [Project Name]</div>
+         <div class="subsection">
+            <div class="subsection-title">About</div>
+            <p>[Brief description of the project, goals, and outcomes.]</p>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">References</div>
+            <ol>
+               <li><a href="URL_TO_PDF_4.pdf" target="_blank">Reference 1</a></li>
+            </ol>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Architecture</div>
+            <p>[Describe or diagram the architecture.]</p>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Key Features</div>
+            <ul>
+               <li>[Feature 1]</li>
+            </ul>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Technologies Used</div>
+            <ul>
+               <li>[Technology 1]</li>
+            </ul>
+         </div>
+         <div class="subsection">
+            <div class="subsection-title">Related Papers</div>
+            <ol>
+               <li><a href="URL_TO_PDF_5.pdf" target="_blank">Paper 1</a></li>
+            </ol>
+         </div>
+      </section>
+      <!-- Add more projects as needed, following the same structure -->
    </div>
-   
- </body>
- 
+</body>
 </html>
