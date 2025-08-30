@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8" />
+     <title>Sustainability Achievements</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+     <style>
+          body {
+               font-family: 'Cabin', sans-serif;
+               background: #f4f9f4;
+               margin: 0;
+               padding: 0;
+          }
+          .sustainability-wrapper {
+               max-width: 800px;
+               margin: 40px auto;
+               background: #fff;
+               border-radius: 12px;
+               box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+               padding: 32px;
+          }
+          h1 {
+               color: #2e7d32;
+               text-align: center;
+          }
+          .projects-container {
+               margin: 32px 0;
+          }
+          .project-item {
+               background: #e8f5e9;
+               border-radius: 8px;
+               padding: 20px;
+               margin-bottom: 18px;
+          }
+          .carbon-reduced {
+               font-weight: bold;
+               color: #388e3c;
+          }
+          .interactive-section {
+               background: #f1f8e9;
+               border-radius: 8px;
+               padding: 24px;
+               margin-top: 32px;
+          }
+          label, input, button {
+               font-size: 1rem;
+          }
+          input[type="text"], input[type="number"] {
+               padding: 6px;
+               margin: 0 8px 12px 0;
+               border-radius: 4px;
+               border: 1px solid #bdbdbd;
+          }
+          button {
+               background: #43a047;
+               color: #fff;
+               border: none;
+               border-radius: 4px;
+               padding: 8px 16px;
+               cursor: pointer;
+          }
+          button:hover {
+               background: #388e3c;
+          }
+          #community-list {
+               margin-top: 16px;
+          }
+          .community-entry {
+               background: #e0f2f1;
+               border-radius: 4px;
+               padding: 8px;
+               margin-bottom: 8px;
+          }
+     </style>
+</head>
+<body>
+     <div class="sustainability-wrapper">
+          <h1>Sustainability Through Our Projects</h1>
+          <p style="text-align:center;">Discover how our initiatives are making a real impact on the environment by reducing carbon emissions. Join us and be part of the change!</p>
+          
+          <div class="projects-container">
+               <div class="project-item">
+                    <h2>Solar Rooftop Installation</h2>
+                    <p>Installed solar panels on community buildings, generating clean energy.</p>
+                    <p class="carbon-reduced">Carbon Emissions Reduced: <span id="solar-carbon">12,500</span> kg CO₂/year</p>
+               </div>
+               <div class="project-item">
+                    <h2>Tree Plantation Drive</h2>
+                    <p>Planted over 2,000 native trees in urban areas.</p>
+                    <p class="carbon-reduced">Carbon Emissions Reduced: <span id="tree-carbon">4,800</span> kg CO₂/year</p>
+               </div>
+               <div class="project-item">
+                    <h2>Waste-to-Compost Program</h2>
+                    <p>Converted organic waste into compost, reducing landfill emissions.</p>
+                    <p class="carbon-reduced">Carbon Emissions Reduced: <span id="compost-carbon">2,300</span> kg CO₂/year</p>
+               </div>
+          </div>
+
+          <div class="interactive-section">
+               <h2>Take Part in Sustainability!</h2>
+               <form id="community-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="contribution">Your Project/Action:</label>
+                    <input type="text" id="contribution" required>
+                    <label for="carbon">CO₂ Reduced (kg):</label>
+                    <input type="number" id="carbon" min="1" required>
+                    <button type="submit">Add My Contribution</button>
+               </form>
+               <div id="community-list"></div>
+          </div>
+     </div>
+     <script>
+          const form = document.getElementById('community-form');
+          const list = document.getElementById('community-list');
+
+          form.addEventListener('submit', function(e) {
+               e.preventDefault();
+               const name = document.getElementById('name').value.trim();
+               const contribution = document.getElementById('contribution').value.trim();
+               const carbon = document.getElementById('carbon').value.trim();
+
+               if (name && contribution && carbon) {
+                    const entry = document.createElement('div');
+                    entry.className = 'community-entry';
+                    entry.innerHTML = `<strong>${name}</strong> contributed: <em>${contribution}</em> (<span style="color:#388e3c;">${carbon} kg CO₂ reduced</span>)`;
+                    list.prepend(entry);
+                    form.reset();
+               }
+          });
+     </script>
+</body>
+</html>
