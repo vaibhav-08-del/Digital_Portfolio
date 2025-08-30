@@ -1,42 +1,311 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Page title</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <link rel ="stylesheet" href="styles.css">
- </head>
-
- <body>
-        <div class="Carrer-Wrapper">
-
-  <h1>My Career Timeline</h1>
-
-  <div class="timeline-container">
-    <div class="year-marker">
-      <div class="year">2021</div>
-      <div class="tooltip">Started as a Junior Developer at XYZ Corp. Worked on backend systems using Java.</div>
+  <meta charset="utf-8" />
+  <title>Careers | Project Openings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cabin', sans-serif;
+      background: #f4f6fb;
+      margin: 0;
+      color: #222;
+    }
+    .career-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 32px 32px 32px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #0002;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      color: #1976d2;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .search-bar input {
+      width: 350px;
+      padding: 10px 16px;
+      border: 1px solid #b0bec5;
+      border-radius: 6px 0 0 6px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .search-bar button {
+      padding: 10px 20px;
+      border: none;
+      background: #1976d2;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-bar button:hover {
+      background: #125ea2;
+    }
+    .jobs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .job-card {
+      background: #f8fbff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 28px 24px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      border-left: 5px solid #1976d2;
+      transition: box-shadow 0.2s;
+    }
+    .job-card:hover {
+      box-shadow: 0 6px 24px #1976d220;
+    }
+    .job-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1976d2;
+      margin-bottom: 2px;
+    }
+    .job-meta {
+      font-size: 0.98rem;
+      color: #607d8b;
+      margin-bottom: 8px;
+    }
+    .job-desc {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .apply-btn {
+      align-self: flex-end;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .apply-btn:hover {
+      background: #125ea2;
+    }
+    /* Modal Styles */
+    .modal-bg {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0006;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal {
+      background: #fff;
+      border-radius: 10px;
+      padding: 32px 28px 24px 28px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 32px #0003;
+      position: relative;
+      animation: fadeIn 0.2s;
+    }
+    @keyframes fadeIn {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #888;
+      cursor: pointer;
+    }
+    .apply-form input, .apply-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 14px 0;
+      border: 1px solid #b0bec5;
+      border-radius: 4px;
+      font-size: 1rem;
+      background: #f7fafc;
+    }
+    .apply-form textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    .apply-form button[type="submit"] {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .apply-form button[type="submit"]:hover {
+      background: #125ea2;
+    }
+    @media (max-width: 600px) {
+      .career-wrapper { padding: 18px 4vw; }
+      .search-bar input { width: 100%; }
+      .modal { padding: 18px 8px 16px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="career-wrapper">
+    <h1>Join Our Team</h1>
+    <div class="search-bar">
+      <input type="text" id="job-search" placeholder="Search jobs by title, skill, or keyword...">
+      <button onclick="searchJobs()">Search</button>
     </div>
-    <div class="year-marker">
-      <div class="year">2022</div>
-      <div class="tooltip">Promoted to Mid-level Developer. Led small teams and started working on frontend tech.</div>
-    </div>
-    <div class="year-marker">
-      <div class="year">2023</div>
-      <div class="tooltip">Joined ABC Inc. as a Senior Engineer. Focused on architecture and mentoring.</div>
-    </div>
-    <div class="year-marker">
-      <div class="year">2024</div>
-      <div class="tooltip">Currently working as a Tech Lead, managing multiple cross-functional teams.</div>
+    <div class="jobs-list" id="jobs-list">
+      <!-- Jobs will be rendered here -->
     </div>
   </div>
 
-            
-        </div>
-    
-    
- </body>
- 
+  <!-- Modal for Apply Form -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h2 id="modal-job-title" style="margin-top:0"></h2>
+      <form class="apply-form" id="apply-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Why are you interested?" required></textarea>
+        <input type="hidden" name="job" id="modal-job-input">
+        <button type="submit">Apply</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Job data
+    const jobs = [
+      {
+        title: "Backend Intern (Java)",
+        location: "Remote / Bangalore",
+        type: "Internship",
+        desc: "Work with our backend team to build scalable APIs and microservices using Java and Spring Boot. Learn best practices in code quality, testing, and deployment.",
+        skills: "Java, Spring Boot, REST APIs, SQL"
+      },
+      {
+        title: "Frontend Developer (React)",
+        location: "Remote / Hyderabad",
+        type: "Full Time",
+        desc: "Develop modern, responsive web interfaces using React.js. Collaborate with designers and backend engineers to deliver seamless user experiences.",
+        skills: "React, JavaScript, HTML, CSS, REST"
+      },
+      {
+        title: "QA Tester",
+        location: "Remote",
+        type: "Contract",
+        desc: "Design and execute test cases, identify bugs, and ensure product quality. Work closely with developers to automate and improve testing processes.",
+        skills: "Manual Testing, Automation, Selenium, JIRA"
+      },
+      {
+        title: "DevOps Engineer",
+        location: "Bangalore",
+        type: "Full Time",
+        desc: "Implement CI/CD pipelines, manage cloud infrastructure, and monitor deployments. Ensure high availability and security of our applications.",
+        skills: "AWS, Docker, Kubernetes, CI/CD, Linux"
+      },
+      {
+        title: "Project Manager",
+        location: "Remote / Pune",
+        type: "Full Time",
+        desc: "Lead cross-functional teams, manage project timelines, and ensure successful delivery. Communicate with stakeholders and drive agile processes.",
+        skills: "Agile, Scrum, Communication, Leadership"
+      },
+      {
+        title: "UI/UX Designer",
+        location: "Remote",
+        type: "Full Time",
+        desc: "Design intuitive and visually appealing interfaces. Conduct user research, create wireframes, and collaborate with developers for implementation.",
+        skills: "Figma, UX Research, Prototyping, Design Systems"
+      }
+    ];
+
+    // Render jobs
+    function renderJobs(filter = "") {
+      const list = document.getElementById('jobs-list');
+      list.innerHTML = "";
+      let filtered = jobs.filter(job =>
+        job.title.toLowerCase().includes(filter) ||
+        job.desc.toLowerCase().includes(filter) ||
+        job.skills.toLowerCase().includes(filter)
+      );
+      if (filtered.length === 0) {
+        list.innerHTML = `<div style="text-align:center;color:#888;font-size:1.1rem;">No jobs found.</div>`;
+        return;
+      }
+      filtered.forEach((job, idx) => {
+        const card = document.createElement('div');
+        card.className = 'job-card';
+        card.innerHTML = `
+          <div class="job-title">${job.title}</div>
+          <div class="job-meta">${job.location} &bull; ${job.type}</div>
+          <div class="job-desc">${job.desc}</div>
+          <div style="font-size:0.97rem;color:#1976d2;margin-bottom:10px;"><b>Skills:</b> ${job.skills}</div>
+          <button class="apply-btn" onclick="openModal('${job.title.replace(/'/g,"\\'")}')">Apply</button>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    // Search jobs
+    function searchJobs() {
+      const val = document.getElementById('job-search').value.trim().toLowerCase();
+      renderJobs(val);
+    }
+    document.getElementById('job-search').addEventListener('input', searchJobs);
+
+    // Modal logic
+    function openModal(jobTitle) {
+      document.getElementById('modal-bg').style.display = 'flex';
+      document.getElementById('modal-job-title').textContent = jobTitle;
+      document.getElementById('modal-job-input').value = jobTitle;
+    }
+    function closeModal() {
+      document.getElementById('modal-bg').style.display = 'none';
+      document.getElementById('apply-form').reset();
+    }
+    document.getElementById('modal-bg').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // Handle form submit
+    document.getElementById('apply-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      closeModal();
+      alert('Thank you for applying! We will contact you soon.');
+    });
+
+    // Initial render
+    renderJobs();
+  </script>
+</body>
 </html>
